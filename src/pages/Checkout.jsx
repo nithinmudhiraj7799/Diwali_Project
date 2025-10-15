@@ -4,26 +4,8 @@ import { useNavigate } from "react-router-dom";
 const Checkout = () => {
   const navigate = useNavigate();
 
+  // 🔸 Crackers grouped by category
   const categories = [
-      {
-      title: "Shots / Rockets (Youth / Adults)",
-      items: [
-        { name: "Baby Rocket", price: 60 },
-        { name: "3 Sound Rocket", price: 190 },
-        { name: "Lunik Rocket", price: 160 },
-        { name: "Two Sound Rocket", price: 170 },
-        { name: "2 in 1 Shot", price: 360 },
-        { name: "3 in 1 Shot", price: 560 },
-        { name: "12 Shots", price: 240 },
-        { name: "30 Shots", price: 750 },
-        { name: "60 Shots", price: 1500 },
-        { name: "100 Wala", price: 60 },
-        { name: "200 Wala", price: 120 },
-        { name: "1000 Wala", price: 260 },
-        { name: "2000 Wala", price: 520 },
-        { name: "5000 Wala", price: 1300 },
-      ],
-    },
     {
       title: "Standard Crackers",
       items: [
@@ -59,7 +41,7 @@ const Checkout = () => {
       title: "Flower Pots (FP)",
       items: [
         { name: "Flower Pot Big", price: 100 },
-        { name: "Flower Pot ", price: 120 },
+        { name: "Flower Pot Small", price: 120 },
         { name: "Flower Pot Special", price: 160 },
       ],
     },
@@ -86,7 +68,25 @@ const Checkout = () => {
         { name: "Electric Sparkles 30 cm", price: 56 },
       ],
     },
-  
+    {
+      title: "Shots / Rockets (Youth / Adults)",
+      items: [
+        { name: "Baby Rocket", price: 60 },
+        { name: "3 Sound Rocket", price: 190 },
+        { name: "Lunik Rocket", price: 160 },
+        { name: "Two Sound Rocket", price: 170 },
+        { name: "2 in 1 Shot", price: 360 },
+        { name: "3 in 1 Shot", price: 560 },
+        { name: "12 Shots", price: 240 },
+        { name: "30 Shots", price: 750 },
+        { name: "60 Shots", price: 1500 },
+        { name: "100 Wala", price: 60 },
+        { name: "200 Wala", price: 120 },
+        { name: "1000 Wala", price: 260 },
+        { name: "2000 Wala", price: 1520 },
+        { name: "5000 Wala", price: 1300 },
+      ],
+    },
     {
       title: "Bombs / Loud Crackers",
       items: [
@@ -116,49 +116,44 @@ const Checkout = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-700 p-4 sm:p-6 text-gray-900">
-      <motion.p
-        className="text-3xl sm:text-4xl font-extrabold text-center mb-8 drop-shadow-lg text-yellow-400"
+    <div className="min-h-screen bg-gradient-to-br from-yellow-500 via-orange-500 to-pink-500 p-6 text-white">
+      <motion.h1
+        className="text-4xl font-bold text-center mb-8"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        🎆 JAI BHAVANI CRACKERS 🎆
-        <p className="text-xl font-semibold text-red-200 mt-1">
-          Wholesale Price List 2025
-        </p>
-      </motion.p>
+        🎇 JAI BHAVANI CRACKERS - WHOLESALE PRICES
+      </motion.h1>
 
       {categories.map((cat, idx) => (
         <motion.div
           key={idx}
-          className="bg-white p-4 sm:p-6 rounded-2xl mb-8 shadow-xl border border-yellow-400 hover:shadow-2xl transition-all duration-300"
-          initial={{ opacity: 0, y: 40 }}
+          className="bg-white/20 backdrop-blur-md p-5 rounded-xl mb-10 shadow-lg border border-white/30"
+          initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: idx * 0.05 }}
+          transition={{ delay: idx * 0.1 }}
         >
-          <h2 className="text-xl sm:text-2xl font-bold mb-3 text-purple-700">
+          <h2 className="text-2xl font-semibold mb-4 text-yellow-300">
             {cat.title}
           </h2>
           <div className="overflow-x-auto">
-            <table className="w-full text-left text-sm sm:text-base">
+            <table className="w-full text-left">
               <thead>
-                <tr className="border-b border-gray-300 text-purple-600">
-                  <th className="py-2 w-10">No.</th>
+                <tr className="border-b border-white/40">
+                  <th className="py-2">No.</th>
                   <th>Product Name</th>
-                  <th className="text-right pr-2">Wholesale (₹)</th>
+                  <th>Wholesale Price (₹)</th>
                 </tr>
               </thead>
               <tbody>
                 {cat.items.map((item, i) => (
                   <tr
                     key={i}
-                    className="border-b border-gray-200 hover:bg-purple-100 transition-all"
+                    className="border-b border-white/20 hover:bg-white/10 transition"
                   >
-                    <td className="py-2 text-gray-800">{i + 1}</td>
-                    <td className="text-gray-900 font-medium">{item.name}</td>
-                    <td className="text-right font-semibold text-green-600">
-                      ₹{item.price}
-                    </td>
+                    <td className="py-2">{i + 1}</td>
+                    <td>{item.name}</td>
+                    <td className="font-semibold">{item.price}</td>
                   </tr>
                 ))}
               </tbody>
@@ -167,18 +162,17 @@ const Checkout = () => {
         </motion.div>
       ))}
 
-      <div className="text-center mt-10 text-yellow-100">
-        <p className="font-semibold text-lg sm:text-xl text-yellow-300">
+      {/* Contact Info */}
+      <div className="text-center mt-10 opacity-90">
+        <p className="font-semibold text-lg">
           📞 9502749310 | 6302296338
         </p>
-        <p>All Types of Crackers Available - Wholesale & Retail</p>
-        <p className="mt-1 text-yellow-200 font-medium">
-          Light Up Your Diwali with Joy & Sparkle! ✨
-        </p>
+        <p>All Types of Crackers Available - Wholesale</p>
+        <p className="mt-2">Light Up Your Diwali with Joy & Sparkle! ✨</p>
 
         <button
           onClick={() => navigate("/")}
-          className="mt-6 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold px-6 py-3 rounded-full shadow-md hover:scale-110 hover:shadow-lg transition-transform duration-300"
+          className="mt-6 bg-yellow-300 text-black font-semibold px-6 py-3 rounded-lg shadow-lg hover:scale-110 transition-transform"
         >
           ⬅ Back to Home
         </button>
