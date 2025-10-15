@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-const checkout = () => {
+const Checkout = () => {
   const navigate = useNavigate();
 
   // 🔸 Crackers grouped by category
@@ -181,4 +181,4 @@ const checkout = () => {
   );
 };
 
-export default checkout;
+export default Checkout;
