@@ -4,175 +4,173 @@ import { useNavigate } from "react-router-dom";
 const Checkout = () => {
   const navigate = useNavigate();
 
-  // 🔸 Crackers grouped by category
   const categories = [
     {
-      title: "Standard Crackers",
+      title: "Shots",
       items: [
-        { name: "GCGD", price: 160 },
-        { name: "Rocket Bomb", price: 100 },
-        { name: "Bird", price: 370 },
-        { name: "Hero", price: 90 },
-        { name: "Hanuman", price: 800 },
-        { name: "28 Cursor", price: 20 },
-        { name: "28 Giant", price: 36 },
-        { name: "Commando", price: 120 },
-        { name: "Cheetah", price: 260 },
-        { name: "R1T Noponu (20 items)", price: 790 },
-        { name: "Saddam", price: 120 },
-        { name: "doH d!H", price: 50 },
-        { name: "Tin Tin", price: 40 },
-        { name: "24 DG", price: 480 },
-        { name: "GC (Ground Chakra) Big 25 pcs", price: 150 },
-        { name: "GC Big 10 pcs", price: 760 },
-        { name: "GC", price: 160 },
-        { name: "GC SPC", price: 100 },
+        { name: "12 Shots", price: 250 },
+        { name: "30 Shots", price: 550 },
+        { name: "60 Shots", price: 1050 },
+        { name: "2 in 1", price: 280 },
+        { name: "3 in 1", price: 400 },
       ],
     },
     {
-      title: "Laxmi Crackers",
+      title: "Walas",
       items: [
-        { name: "3Y2 Laxmi", price: 20 },
-        { name: "4 Inch Laxmi", price: 280 },
-        { name: "4 Inch DG Laxmi", price: 500 },
+        { name: "100 Wala", price: 50 },
+        { name: "200 Wala", price: 90 },
+        { name: "1000 Wala", price: 200 },
+        { name: "2000 Wala", price: 360 },
+        { name: "Beed Bomb", price: 175 },
+        { name: "Pop Pop", price: 250 },
+        { name: "7 No Renu Bomb", price: 50 },
       ],
     },
     {
-      title: "Flower Pots (FP)",
+      title: "Flowerpots",
       items: [
-        { name: "Flower Pot Big", price: 100 },
-        { name: "Flower Pot Small", price: 120 },
-        { name: "Flower Pot Special", price: 160 },
+        { name: "Flowerpot", price: 75 },
+        { name: "Flowerpot Small", price: 120 },
+        { name: "Flowerpot Special", price: 130 },
+        { name: "35mm Tub", price: 90 },
+        { name: "50mm Tub", price: 180 },
+        { name: "Best Choice", price: 150 },
+        { name: "Colour Koti Small", price: 180 },
+        { name: "Colour Koti Medium", price: 200 },
+        { name: "Colour Koti Large Deluxe", price: 330 },
       ],
     },
     {
-      title: "Tubes, Cursors & Giant Crackers",
+      title: "Rockets & Others",
       items: [
-        { name: "35 mm Tube", price: 120 },
-        { name: "50 mm Tube", price: 220 },
+        { name: "Baby Rocket", price: 50 },
+        { name: "3 Sound Rocket", price: 145 },
+        { name: "Lunik", price: 120 },
+        { name: "2 Sound Rocket", price: 135 },
+        { name: "Tiger Bomb", price: 350 },
+        { name: "Commando", price: 85 },
+        { name: "Cheeta", price: 180 },
       ],
     },
     {
-      title: "Sparklers, Colour Koti & Showers (Children)",
+      title: "Loud Bombs",
       items: [
-        { name: "Best Choice", price: 180 },
-        { name: "Colour Koti Small", price: 240 },
-        { name: "Colour Koti Medium", price: 280 },
-        { name: "Colour Koti Large", price: 500 },
-        { name: "Photo Flash", price: 140 },
-        { name: "Pencil Once More", price: 90 },
-        { name: "Silver Rain", price: 130 },
-        { name: "Twinkle Star", price: 40 },
-        { name: "Electric Sparkles 7 cm", price: 16 },
-        { name: "Electric Sparkles 15 cm", price: 56 },
-        { name: "Electric Sparkles 30 cm", price: 56 },
+        { name: "GCGD", price: 130 },
+        { name: "Rocket Bomb", price: 80 },
+        { name: "Bird", price: 15 },
+        { name: "Hero", price: 75 },
+        { name: "Hanuman", price: 60 },
+        { name: "28 Cursor", price: 17 },
+        { name: "28 Giant", price: 35 },
+        { name: "R1 Tnp", price: 80 },
+        { name: "Saddam", price: 90 },
+        { name: "Hip Hop", price: 40 },
+        { name: "Tin Tin", price: 35 },
+        { name: "24DG", price: 55 },
+        { name: "Ground Chekkar Big", price: 135 },
+        { name: "GC 10 Items", price: 50 },
+        { name: "GC", price: 140 },
+        { name: "GC Special", price: 80 },
+        { name: "Bird Laxmi 3½", price: 17 },
       ],
     },
     {
-      title: "Shots / Rockets (Youth / Adults)",
+      title: "Miscellaneous",
       items: [
-        { name: "Baby Rocket", price: 60 },
-        { name: "3 Sound Rocket", price: 190 },
-        { name: "Lunik Rocket", price: 160 },
-        { name: "Two Sound Rocket", price: 170 },
-        { name: "2 in 1 Shot", price: 360 },
-        { name: "3 in 1 Shot", price: 560 },
-        { name: "12 Shots", price: 240 },
-        { name: "30 Shots", price: 750 },
-        { name: "60 Shots", price: 1500 },
-        { name: "100 Wala", price: 60 },
-        { name: "200 Wala", price: 120 },
-        { name: "1000 Wala", price: 260 },
-        { name: "2000 Wala", price: 1520 },
-        { name: "5000 Wala", price: 1300 },
-      ],
-    },
-    {
-      title: "Bombs / Loud Crackers",
-      items: [
-        { name: "Beed Bomb", price: 210 },
-        { name: "1280L (Loud)", price: 240 },
-        { name: "Pop Pop 5000", price: 10000 },
-      ],
-    },
-    {
-      title: "Guns / Roll / Miscellaneous",
-      items: [
-        { name: "Gun (Small)", price: 70 },
-        { name: "Gun (Sound Type)", price: 28 },
-        { name: "Gun (28)", price: 56 },
-        { name: "Gun (Big Type)", price: 720 },
-        { name: "Gun", price: 360 },
-        { name: "Roll Caps", price: 110 },
-        { name: "Robin", price: 110 },
-        { name: "Match Box", price: 160 },
-        { name: "Butterfly", price: 160 },
-        { name: "Ring", price: 1200 },
-        { name: "Manoraj", price: 480 },
-        { name: "Selfie Stick", price: 300 },
-        { name: "7 No Renu Bomb", price: 60 },
+        { name: "Photo Flash", price: 125 },
+        { name: "Pencil Once More", price: 80 },
+        { name: "Silver Rain", price: 110 },
+        { name: "½ Twinkle Star", price: 30 },
+        { name: "4 Twinkle", price: 85 },
+        { name: "7cm", price: 10 },
+        { name: "15cm", price: 48 },
+        { name: "30cm", price: 58 },
+        { name: "Ring", price: 900 },
+        { name: "Monoraj", price: 360 },
+        { name: "Selfie Stick", price: 250 },
+        { name: "Match Box", price: 130 },
+        { name: "Butterfly", price: 150 },
       ],
     },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-500 via-orange-500 to-pink-500 p-6 text-white">
-      <motion.h1
-        className="text-4xl font-bold text-center mb-8"
+    <div className="min-h-screen bg-gradient-to-tr from-purple-500 via-orange-400 to-green-400 p-5 sm:p-8 md:p-10 text-gray-900">
+      <motion.p
+        className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-10 text-white drop-shadow-lg"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
       >
-        🎇 JAI BHAVANI CRACKERS - WHOLESALE PRICES
-      </motion.h1>
+        🎇 JAI BHAVANI CRACKERS 🎆
+      </motion.p>
 
-      {categories.map((cat, idx) => (
-        <motion.div
-          key={idx}
-          className="bg-white/20 backdrop-blur-md p-5 rounded-xl mb-10 shadow-lg border border-white/30"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: idx * 0.1 }}
-        >
-          <h2 className="text-2xl font-semibold mb-4 text-yellow-300">
-            {cat.title}
-          </h2>
-          <div className="overflow-x-auto">
-            <table className="w-full text-left">
-              <thead>
-                <tr className="border-b border-white/40">
-                  <th className="py-2">No.</th>
-                  <th>Product Name</th>
-                  <th>Wholesale Price (₹)</th>
-                </tr>
-              </thead>
-              <tbody>
-                {cat.items.map((item, i) => (
-                  <tr
-                    key={i}
-                    className="border-b border-white/20 hover:bg-white/10 transition"
-                  >
-                    <td className="py-2">{i + 1}</td>
-                    <td>{item.name}</td>
-                    <td className="font-semibold">{item.price}</td>
+      <div className="max-w-6xl mx-auto flex flex-col gap-8">
+        {categories.map((cat, idx) => (
+          <motion.div
+            key={idx}
+            className="bg-white p-5 sm:p-7 rounded-3xl shadow-xl border border-orange-200 hover:shadow-2xl hover:scale-[1.02] transition-transform"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: idx * 0.1 }}
+          >
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-orange-600 border-b-2 border-orange-300 pb-2">
+              {cat.title}
+            </h2>
+
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse text-sm sm:text-base">
+                <thead>
+                  <tr className="bg-orange-100 text-orange-800 border-b border-orange-200">
+                    <th className="py-2 px-3 sm:px-4 text-left">No.</th>
+                    <th className="px-3 sm:px-4 text-left">Product Name</th>
+                    <th className="px-3 sm:px-4 text-right">
+                      Wholesale Price (₹)
+                    </th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </motion.div>
-      ))}
+                </thead>
+                <tbody>
+                  {cat.items.map((item, i) => (
+                    <tr
+                      key={i}
+                      className="border-b border-orange-100 hover:bg-orange-50 transition-colors"
+                    >
+                      <td className="py-2 px-3 sm:px-4 text-gray-700">{i + 1}</td>
+                      <td className="px-3 sm:px-4 font-medium text-gray-800">
+                        {item.name}
+                      </td>
+                      <td className="px-3 sm:px-4 text-right font-semibold text-green-700">
+                        ₹{item.price}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+         {/* Wholesale Note */}
+      <div className="max-w-6xl mx-auto mt-6 p-4 bg-blue-100 text-yellow-900 rounded-2xl text-center font-semibold shadow-md">
+        ⚠️ Note: Wholesale prices are applicable only for purchases of ₹5000 and above.
+      </div>
 
-      {/* Contact Info */}
-      <div className="text-center mt-10 opacity-90">
-        <p className="font-semibold text-lg">
+      {/* Footer */}
+      <div className="text-center mt-14 text-white">
+        <p className="font-semibold text-lg sm:text-xl">
           📞 9502749310 | 6302296338
         </p>
-        <p>All Types of Crackers Available - Wholesale</p>
-        <p className="mt-2">Light Up Your Diwali with Joy & Sparkle! ✨</p>
+        <p className="text-sm sm:text-base">
+          All Types of Crackers Available — Wholesale & Retail
+        </p>
+        <p className="mt-2 italic opacity-90">
+          💥 Light Up Your Diwali with Happiness, Safety & Sparkle! 💫
+        </p>
 
         <button
           onClick={() => navigate("/")}
-          className="mt-6 bg-yellow-300 text-black font-semibold px-6 py-3 rounded-lg shadow-lg hover:scale-110 transition-transform"
+          className="mt-6 bg-white text-orange-600 font-bold px-6 sm:px-8 py-3 rounded-2xl shadow-lg hover:bg-orange-600 hover:text-white transition-all"
         >
           ⬅ Back to Home
         </button>
