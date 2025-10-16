@@ -156,13 +156,21 @@ const Checkout = () => {
         ⚠️ Note: Wholesale prices are applicable only for purchases of ₹5000 and above.
       </div>
 
-      {/* Footer */}
+        {/* Footer with Location */}
       <div className="text-center mt-14 text-white">
         <p className="font-semibold text-lg sm:text-xl">
           📞 9502749310 | 6302296338
         </p>
         <p className="text-sm sm:text-base">
           All Types of Crackers Available — Wholesale & Retail
+        </p>
+        <p className="mt-1 text-sm sm:text-base">
+          📍 Near ZPHS School, Patloor
+        </p>
+        <p className="text-sm sm:text-base">
+          🏡 Village: <span className="font-semibold">Patloor</span> | Mandal:{" "}
+          <span className="font-semibold">Marpally</span> | District:{" "}
+          <span className="font-semibold">Vikarabad</span>
         </p>
         <p className="mt-2 italic opacity-90">
           💥 Light Up Your Diwali with Happiness, Safety & Sparkle! 💫

@@ -6,18 +6,16 @@ const Home = () => {
 
   const quotations = [
     "✨ Diwali is the festival of lights, joy, and togetherness! ✨",
-    "🎇 Celebrate this Diwali with happiness, love, and sparkles all around! 🎇"
+    "🎇 Celebrate this Diwali with happiness, love, and sparkles all around! 🎇",
   ];
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-start bg-gradient-to-br from-purple-900 via--700 to-yellow-500 text-white relative overflow-hidden px-4 sm:px-8 py-10">
-
-     {/* Fireworks Background */}
-<div className="absolute inset-0 pointer-events-none">
-  <div className="w-full h-full bg-[url('https://i.ibb.co/TrGhxv7/fireworks.gif')] bg-cover bg-center opacity-10 blur-sm"></div>
-  <div className="absolute inset-0 bg-black/20"></div>
-</div>
-
+    <div className="min-h-screen flex flex-col items-center justify-start bg-gradient-to-br from-purple-900 via-yellow-700 to-yellow-500 text-white relative overflow-hidden px-4 sm:px-8 py-10">
+      {/* Fireworks Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="w-full h-full bg-[url('https://i.ibb.co/TrGhxv7/fireworks.gif')] bg-cover bg-center opacity-10 blur-sm"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
+      </div>
 
       {/* Navbar */}
       <motion.nav
@@ -35,7 +33,6 @@ const Home = () => {
         </motion.span>
         <p className="text-lg sm:text-xl md:text-3xl font-extrabold text-white drop-shadow-lg whitespace-nowrap">
           Jai Bhavani Crackers
-
         </p>
         <motion.span
           className="ml-2 text-yellow-200 text-xl"
@@ -72,10 +69,10 @@ const Home = () => {
           whileHover={{ scale: 1.1 }}
           onClick={() => navigate("/products")}
         >
-         <motion.span
-            className="absolute inset-0 bg-gradient-to-r from-white/40 via-green-200 to-green-400 opacity-30 blur-xl animate-pulse"
-          />
-          <span className="relative z-10 text-center block animate-pulse"> Explore Crackers</span>
+          <motion.span className="absolute inset-0 bg-gradient-to-r from-white/40 via-green-200 to-green-400 opacity-30 blur-xl animate-pulse" />
+          <span className="relative z-10 text-center block animate-pulse">
+            Explore Crackers
+          </span>
         </motion.button>
 
         {/* View Price List Button */}
@@ -84,21 +81,28 @@ const Home = () => {
           whileHover={{ scale: 1.1 }}
           onClick={() => navigate("/checkout")}
         >
-          <motion.span
-            className="absolute inset-0 bg-gradient-to-r from-white/40 via-green-200 to-green-400 opacity-30 blur-xl animate-pulse"
-          />
-          <span className="relative z-10 text-center block animate-pulse">📄 Full Price List</span>
+          <motion.span className="absolute inset-0 bg-gradient-to-r from-white/40 via-green-200 to-green-400 opacity-30 blur-xl animate-pulse" />
+          <span className="relative z-10 text-center block animate-pulse">
+            📄 Full Price List
+          </span>
         </motion.button>
       </div>
 
       {/* Footer */}
       <div className="mt-10 sm:mt-12 text-center text-sm sm:text-base opacity-90 z-10 mb-6">
         <p>📞 9502749310 | 6302296338</p>
-        <p>© 2025 Jai Bhavani Crackers | Wishing You a Joyful Diwali!</p>
+        <p>📍 Near ZPHS School, Patloor</p>
+        <p>
+          🏡 Village: <span className="font-semibold">Patloor</span> | Mandal:{" "}
+          <span className="font-semibold">Marpally</span> | District:{" "}
+          <span className="font-semibold">Vikarabad</span>
+        </p>
+        <p className="mt-2">
+          © 2025 Jai Bhavani Crackers | Wishing You a Joyful Diwali! 🌟
+        </p>
       </div>
     </div>
   );
 };
 
 export default Home;
-
